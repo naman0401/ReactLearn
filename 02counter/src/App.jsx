@@ -4,11 +4,24 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [counterValue, setCountValue] = useState(0)//This will give error as in is byDefault Constant
 
-  let counterValue = 5
+  let [counterValue, setCountValue] = useState(5)
+  // let counterValue = 5
 
-  
+  function addValue(){
+    // counterValue=counterValue+1
+    setCountValue(counterValue+1)
+    console.log("Value Added"+Math.random())
+  }
+
+  const decValue = () =>{
+    if(counterValue-1>=0)
+    {  counterValue = counterValue-1
+      setCountValue(counterValue)
+    }
+  }
+
 
 
   return (
